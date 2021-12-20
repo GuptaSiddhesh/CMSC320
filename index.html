@@ -14276,20 +14276,23 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h2> Introduction </h2></p>
 <p> 
-Intro here
+Computer Science is a popular major at University of Maryland - College Park and as students of Computer Science our goal was to help other students by providing a tool to predict their performance in some of the courses. Students always wonder what grade they could get in their upper level courses and choose accordingly. Students also want to know how much work is required for a class or how difficult will a class be for them. 
+
+This is why we wanted to build a model which predict which upper level computer science courses can a student take and do reasonably well on them based on their performances in previous courses (Pre-Requisites or Gateway Courses). We want to answer the question that are grades and performance in a course correlated to the performance in the pre-requisite courses for that course?
+
+If our model is reasonabaly successful, we can provide insights to students which can prove very helpful when taking some important decisions. For example, a student can know that historically other students who have a similar performance to them have ended with a X grade in the class. So student can understand and know that they might have to put in more work than usual to earn a better grade than this. And sometimes its just peace of mind and anxiety buster to know where you stand and where you can end-up at the end of the semester. The model can help predict the courses where a student can perform the best so they can make an informed decision which can impact their progress as a student at the university.
 </p>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2> Data Collection </h2><p>A student's acadmic records are goverened by many privacy laws, including FERPA. FERPA is a Federal law that protects a student's education records. It may only disclose a student's educational record if he or she has given written consent to do so. We requested for anonymized data from the school, but due to these laws we couldn't get access to such data. We had to do it the harder way - survey people for their data. Then we made a google form to collect grades for each course they took. We made it anonymous so that no personal information is collected and can be linked to a specific student. We relied on the honesty of students to fill out the form.</p>
+<h2> Data Collection </h2><p>Since a student's academic records are private and is enforced by laws like FERPA (Family Educational Rights and Privacy Act). FERPA is a federal law that protects a student's education records. It may only disclose a student's educational record if he or she has given written consent to do so. We requested for anonymized data from the University of Maryland, but due to these laws we could not gain access to the data. Therefore we had to do it the harder way - survey people for their data. For this we made a Google form to collect grades for each Computer Science course students took. The form was anonymous so that no personal information is collected and can be linked to a specific student.</p>
 <p>Important things about the data -</p>
 <ol>
-<li>We generally saw a trend that students who performed well in classes shared their data. For most of the classes the average grade from the survey was heigher than the overall general average grade. (Tanmay insert teh graph and explain the results)</li>
-<li>Student's are allowed to skip certain classes through the help of AP's, high school credits, and Computer Science Exemption exams. We encountered such data and we had no way to determine which grade to assign the student. We made a general assumption to take these as B+ grades, which according to university policy means Good Mastery of the subject. This was done for the following courses - CMSC 131, CMSC 132, CMSC 216, CMSC 250, MATH 140, and MATH 141. </li>
+<li>We generally saw a trend that students who performed well in classes shared their data. For most of the classes the average grade from the survey was heigher than the overall general average grade. (Tanmay insert the graph and explain the results)</li>
+<li>Student's are allowed to skip certain classes through the help of AP's, high school credits, and Computer Science Exemption exams. We encountered such data and we had no way to determine which grade to assign the student. We made a general assumption to take these as B grades, which according to university policy means Good Mastery of the subject. This was done for the following courses - CMSC 131, CMSC 132, CMSC 216, CMSC 250, MATH 140, and MATH 141. </li>
 <li>There were cases where students didn't want to share the results/grades on a particular course. To deal with this, we averaged the grades in other courses that the student took and entered that value instead of "Don't want to share".</li>
-<li>There were some students who didn't attempt certain courses. We ignored such student enteries entirely for certain models depending on the subject.</li>
-<li>There were certain edge cases also, which we handled on case to case basis.
+<li>There were some students who didn't attempt certain courses. We ignored such student enteries entirely for certain models depending on the subject.
 &lt;/p&gt;</li>
 </ol>
 
