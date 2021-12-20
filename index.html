@@ -16866,7 +16866,12 @@ Therefore the predicted grade of the student in 351 is  C [[0. 0. 0. 1. 0.]] wit
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We get accurate prediction for CMSC351 and not so accurate prediction for CMSC330.</p>
+<h3 id="Result">Result<a class="anchor-link" href="#Result">&#182;</a></h3><p>We get an accurate prediction for CMSC 330 but not so accurate prediction for CMSC 351. The student's predicted and actual grade was same for CMSC 330 but different for CMSC 351.</p>
+<h3 id="Further-Improvements">Further Improvements<a class="anchor-link" href="#Further-Improvements">&#182;</a></h3><p>We saw that the data was imbalanced. We had lot of data enteries for students who recieved grades of A. This might be because students felt not safe sharing their grade data openly. It can also be the case that students inflate their grades while entering in the survey.</p>
+<p>All these result in a skewed dataset.</p>
+<p>We can improve this imbalance by adding more samples from under-represented classes.</p>
+<p>To do this we can use the technique of SMOTE - Synthetic Minority Over-sampling Technique. SMOTE technique consists of synthesizing elements for the minority class based on those that already exist. It works by randomly picking a point from the minority class and computing the k-nearest neighbors for this point. The synthetic points are added between the choosen point and its neighbours. You can read about this from <a href="https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a">Multi-Class Classification for Imbalanced Dataset</a></p>
+<p>We can also improve the results by having a wider and a more representative dataset.</p>
 
 </div>
 </div>
